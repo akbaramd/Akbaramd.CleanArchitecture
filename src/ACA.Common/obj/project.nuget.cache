@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "L+IKf7vhLwYhHozH578+9n2nogev1QWEB66UJzbi0+eVctdyIqyHy+dYyIAZOAzxTZ33bDcKKWlRvhlJdtEJtA==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Common\\ACA.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ahmadi\\.nuget\\packages\\fastendpoints\\5.25.0\\fastendpoints.5.25.0.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\fastendpoints.attributes\\5.25.0\\fastendpoints.attributes.5.25.0.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\fastendpoints.messaging.core\\5.25.0\\fastendpoints.messaging.core.5.25.0.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\fastendpoints.security\\5.25.0\\fastendpoints.security.5.25.0.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\fluentvalidation\\11.9.1\\fluentvalidation.11.9.1.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.3\\microsoft.aspnetcore.authentication.jwtbearer.8.0.3.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.1.2\\microsoft.identitymodel.abstractions.7.1.2.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.1.2\\microsoft.identitymodel.jsonwebtokens.7.1.2.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\microsoft.identitymodel.logging\\7.1.2\\microsoft.identitymodel.logging.7.1.2.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\microsoft.identitymodel.protocols\\7.1.2\\microsoft.identitymodel.protocols.7.1.2.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\7.1.2\\microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.1.2\\microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.1.2\\system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

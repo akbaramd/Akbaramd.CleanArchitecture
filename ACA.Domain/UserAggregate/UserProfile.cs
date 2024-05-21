@@ -9,8 +9,8 @@ public class UserProfile : ValueObject
     public string? FirstName { get; set; }
     public string? LastName { get; set; }
     public string? Email { get; set; }
-    
-    public UserPhoneNumber? PhoneNumber { get; set; }
+
+    public UserPhoneNumber PhoneNumber { get; set; } = default!;
 
 
     protected override IEnumerable<object> GetEqualityComponents()

@@ -2,7 +2,7 @@
 
 namespace ACA.Domain.UserAggregate;
 
-public class UserStatus : Enumeration<UserStatus>
+public class UserStatus : Enumeration
 {
     public static UserStatus UnActive = new UserStatus(0, nameof(UnActive));
     public static UserStatus Active = new UserStatus(1, nameof(Active));
@@ -10,6 +10,5 @@ public class UserStatus : Enumeration<UserStatus>
 
     public UserStatus(int id, string name) : base(id, name)
     {
-        string x = this;
     }
 }

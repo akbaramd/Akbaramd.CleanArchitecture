@@ -8,10 +8,11 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\ACA.Domain\ACA.Domain.csproj" />
+      <ProjectReference Include="..\ACA.Common\ACA.Common.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="UseCases\Users\Commands\" />
+      <PackageReference Include="MediatR" Version="12.2.0" />
     </ItemGroup>
 
 </Project>

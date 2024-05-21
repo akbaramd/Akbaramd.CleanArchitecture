@@ -1,10 +1,11 @@
-﻿using ACA.Domain.UserAggregate;
+﻿using ACA.Domain.Shared.Core;
+using ACA.Domain.UserAggregate;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ACA.Infrastructure.Data.Configurations;
 
-public class UserConfiguration : IEntityTypeConfiguration<User>
+public class UsersConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
@@ -39,9 +40,9 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             ctx
                 .Property(x => x.Status)
                 .HasColumnName(nameof(UserProfile.Status))
-                .HasConversion(c => c.Id, v => UserStatus.FromId(v));
+                .HasConversion(c => c.Id, v => Enumeration.FromId<UserStatus>(v));
         });
 
-        builder.HasMany(x => x.Roles).WithMany();
+      
     }
 }
