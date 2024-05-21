@@ -140,6 +140,23 @@
           }
         }
       },
+      "FluentValidation.DependencyInjectionExtensions/11.9.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "11.9.1",
+          "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MediatR/12.2.0": {
         "type": "package",
         "dependencies": {
@@ -2641,6 +2658,23 @@
         "lib/netstandard2.0/FluentValidation.xml",
         "lib/netstandard2.1/FluentValidation.dll",
         "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
+    "FluentValidation.DependencyInjectionExtensions/11.9.1": {
+      "sha512": "3jJbFcCWhiXhrCKFPjKihzccmosv+CleYewd2zEYS4aaUHx9zQSgOvkYbWUGTbDwJ5j2nDWE0Pr1EQ2xY4pryg==",
+      "type": "package",
+      "path": "fluentvalidation.dependencyinjectionextensions/11.9.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.dependencyinjectionextensions.11.9.1.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.nuspec",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
+        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
+        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
       ]
     },
     "MediatR/12.2.0": {
@@ -7236,6 +7270,8 @@
       "FastEndpoints >= 5.25.0",
       "FastEndpoints.Security >= 5.25.0",
       "FastEndpoints.Swagger >= 5.25.0",
+      "FluentValidation >= 11.9.1",
+      "FluentValidation.DependencyInjectionExtensions >= 11.9.1",
       "Microsoft.AspNetCore.OpenApi >= 8.0.4",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -7307,6 +7343,14 @@
           "FastEndpoints.Swagger": {
             "target": "Package",
             "version": "[5.25.0, )"
+          },
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[11.9.1, )"
+          },
+          "FluentValidation.DependencyInjectionExtensions": {
+            "target": "Package",
+            "version": "[11.9.1, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",

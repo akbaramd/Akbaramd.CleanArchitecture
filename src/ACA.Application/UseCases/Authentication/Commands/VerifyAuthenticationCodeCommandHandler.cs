@@ -17,6 +17,7 @@ public class VerifyAuthenticationCodeCommandHandler(
     VerifyAuthenticationCodeCommand request,
     CancellationToken cancellationToken)
   {
+    
     var verification = await verificationRepository.FindOneAsync(
       x => x.Type == VerificationType.Phone && x.Key == request.PhoneNumber.Number, cancellationToken);
 

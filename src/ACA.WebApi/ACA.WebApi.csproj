@@ -11,6 +11,8 @@
         <PackageReference Include="FastEndpoints" Version="5.25.0" />
         <PackageReference Include="FastEndpoints.Security" Version="5.25.0" />
         <PackageReference Include="FastEndpoints.Swagger" Version="5.25.0" />
+        <PackageReference Include="FluentValidation" Version="11.9.1" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.1" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.4"/>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
@@ -29,6 +31,12 @@
     <ItemGroup>
       <Compile Update="Endpoints\GetWeatherForecastEndpoint.Response.cs">
         <DependentUpon>GetWeatherForecastEndpoint.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Endpoints\Authentication\AuthenticationVerifyCodeEndpoint.Validator.cs">
+        <DependentUpon>AuthenticationVerifyCodeEndpoint.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Endpoints\Authentication\AuthenticationSendCodeEndpoint.Validator.cs">
+        <DependentUpon>AuthenticationSendCodeEndpoint.cs</DependentUpon>
       </Compile>
     </ItemGroup>
 

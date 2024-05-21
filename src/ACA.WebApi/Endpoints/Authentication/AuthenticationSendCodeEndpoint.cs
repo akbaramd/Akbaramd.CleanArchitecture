@@ -1,6 +1,7 @@
 using ACA.Application.Abstractions.UseCases.Authentication.Commands;
 using ACA.Domain.UserAggregate;
 using FastEndpoints;
+using FluentValidation;
 using MediatR;
 
 namespace ACA.WebApi.Endpoints.Authentication;
@@ -26,6 +27,7 @@ public class AuthenticationSendCodeEndpoint(IMediator mediator) : Endpoint<SendA
 
   public override async Task HandleAsync(SendAuthenticationCodeCommand req, CancellationToken ct)
   {
+   
     var result = await _mediator.Send(req, ct);
     if (result.IsSuccess)
     {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sIQnitGoxIAhUJtJDaR/JPqY12cwe5WNRBUZNE/AviVlRCEN7wQTSRixvh8z+7ZdxnZTsfDSjySDocFPNxwS+w==",
+  "dgSpecHash": "snz7ujte2hwX9NXwpUgz4F0gjfDcqTOeidovzh9F0bFf7PdxS7vAzhKtHcQSEE4qOCJh40jO8+gjKdGrTL2V7A==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.WebApi\\ACA.WebApi.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\ahmadi\\.nuget\\packages\\fastendpoints.security\\5.25.0\\fastendpoints.security.5.25.0.nupkg.sha512",
     "C:\\Users\\ahmadi\\.nuget\\packages\\fastendpoints.swagger\\5.25.0\\fastendpoints.swagger.5.25.0.nupkg.sha512",
     "C:\\Users\\ahmadi\\.nuget\\packages\\fluentvalidation\\11.9.1\\fluentvalidation.11.9.1.nupkg.sha512",
+    "C:\\Users\\ahmadi\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.1\\fluentvalidation.dependencyinjectionextensions.11.9.1.nupkg.sha512",
     "C:\\Users\\ahmadi\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\ahmadi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\ahmadi\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.5\\microsoft.aspnetcore.authentication.jwtbearer.8.0.5.nupkg.sha512",
