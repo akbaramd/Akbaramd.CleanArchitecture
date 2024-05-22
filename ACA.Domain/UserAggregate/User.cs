@@ -7,9 +7,8 @@ namespace ACA.Domain.UserAggregate;
 public class User : AggregateRoot<Guid>
 {
   public string UserName { get; set; } = default!;
-  public string? Password { get; set; } = default!;
-  public UserProfile Profile { get; set; } = default!;
+  public string? Password { get; set; } 
+  public UserProfile Profile { get; set; } = new ();
   public ICollection<UserRole> Roles { get; set; } = [];
 
-    
 }
