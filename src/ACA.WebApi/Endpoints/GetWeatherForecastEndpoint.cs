@@ -14,7 +14,7 @@ public class GetWeatherForecastEndpoint : EndpointWithoutRequest<GetWeatherForec
   public override void Configure()
   {
     
-    Get("/weatherforecast2");
+    Get("/weatherforecast");
   }
 
   public override async Task HandleAsync(  CancellationToken ct)

@@ -1,20 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.WebApi\\ACA.WebApi.csproj": {}
+    "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.WebApi\\ACA.WebApi.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\ACA.Domain\\ACA.Domain.csproj": {
+    "D:\\Projects\\Akbaramd.CleanArchitecture\\ACA.Domain\\ACA.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\ACA.Domain\\ACA.Domain.csproj",
+        "projectUniqueName": "D:\\Projects\\Akbaramd.CleanArchitecture\\ACA.Domain\\ACA.Domain.csproj",
         "projectName": "ACA.Domain",
-        "projectPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\ACA.Domain\\ACA.Domain.csproj",
-        "packagesPath": "C:\\Users\\akbar\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\ACA.Domain\\obj\\",
+        "projectPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\ACA.Domain\\ACA.Domain.csproj",
+        "packagesPath": "C:\\Users\\ahmadi\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\ACA.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\akbar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "D:\\Projects\\NuGet.Config",
+          "C:\\Users\\ahmadi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -27,13 +35,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Domain.Shared\\ACA.Domain.Shared.csproj": {
-                "projectPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Domain.Shared\\ACA.Domain.Shared.csproj"
+              "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Domain.Shared\\ACA.Domain.Shared.csproj": {
+                "projectPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Domain.Shared\\ACA.Domain.Shared.csproj"
               }
             }
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -64,21 +73,29 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\ACA.Application.Abstractions.csproj": {
+    "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\ACA.Application.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\ACA.Application.Abstractions.csproj",
+        "projectUniqueName": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\ACA.Application.Abstractions.csproj",
         "projectName": "ACA.Application.Abstractions",
-        "projectPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\ACA.Application.Abstractions.csproj",
-        "packagesPath": "C:\\Users\\akbar\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\obj\\",
+        "projectPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\ACA.Application.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\ahmadi\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\akbar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "D:\\Projects\\NuGet.Config",
+          "C:\\Users\\ahmadi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -91,16 +108,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\ACA.Domain\\ACA.Domain.csproj": {
-                "projectPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\ACA.Domain\\ACA.Domain.csproj"
+              "D:\\Projects\\Akbaramd.CleanArchitecture\\ACA.Domain\\ACA.Domain.csproj": {
+                "projectPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\ACA.Domain\\ACA.Domain.csproj"
               },
-              "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Common\\ACA.Common.csproj": {
-                "projectPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Common\\ACA.Common.csproj"
+              "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Common\\ACA.Common.csproj": {
+                "projectPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Common\\ACA.Common.csproj"
               }
             }
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -131,21 +149,29 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Application\\ACA.Application.csproj": {
+    "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Application\\ACA.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Application\\ACA.Application.csproj",
+        "projectUniqueName": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Application\\ACA.Application.csproj",
         "projectName": "ACA.Application",
-        "projectPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Application\\ACA.Application.csproj",
-        "packagesPath": "C:\\Users\\akbar\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Application\\obj\\",
+        "projectPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Application\\ACA.Application.csproj",
+        "packagesPath": "C:\\Users\\ahmadi\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\akbar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "D:\\Projects\\NuGet.Config",
+          "C:\\Users\\ahmadi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -158,13 +184,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\ACA.Application.Abstractions.csproj": {
-                "projectPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\ACA.Application.Abstractions.csproj"
+              "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\ACA.Application.Abstractions.csproj": {
+                "projectPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\ACA.Application.Abstractions.csproj"
               }
             }
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -195,21 +222,29 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Common\\ACA.Common.csproj": {
+    "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Common\\ACA.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Common\\ACA.Common.csproj",
+        "projectUniqueName": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Common\\ACA.Common.csproj",
         "projectName": "ACA.Common",
-        "projectPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Common\\ACA.Common.csproj",
-        "packagesPath": "C:\\Users\\akbar\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Common\\obj\\",
+        "projectPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Common\\ACA.Common.csproj",
+        "packagesPath": "C:\\Users\\ahmadi\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Common\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\akbar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "D:\\Projects\\NuGet.Config",
+          "C:\\Users\\ahmadi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -225,6 +260,7 @@
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -267,21 +303,29 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Domain.Shared\\ACA.Domain.Shared.csproj": {
+    "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Domain.Shared\\ACA.Domain.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Domain.Shared\\ACA.Domain.Shared.csproj",
+        "projectUniqueName": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Domain.Shared\\ACA.Domain.Shared.csproj",
         "projectName": "ACA.Domain.Shared",
-        "projectPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Domain.Shared\\ACA.Domain.Shared.csproj",
-        "packagesPath": "C:\\Users\\akbar\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Domain.Shared\\obj\\",
+        "projectPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Domain.Shared\\ACA.Domain.Shared.csproj",
+        "packagesPath": "C:\\Users\\ahmadi\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Domain.Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\akbar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "D:\\Projects\\NuGet.Config",
+          "C:\\Users\\ahmadi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -297,6 +341,7 @@
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -321,21 +366,29 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Infrastructure\\ACA.Infrastructure.csproj": {
+    "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Infrastructure\\ACA.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Infrastructure\\ACA.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Infrastructure\\ACA.Infrastructure.csproj",
         "projectName": "ACA.Infrastructure",
-        "projectPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Infrastructure\\ACA.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\akbar\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Infrastructure\\obj\\",
+        "projectPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Infrastructure\\ACA.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ahmadi\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\akbar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "D:\\Projects\\NuGet.Config",
+          "C:\\Users\\ahmadi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -348,16 +401,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\ACA.Domain\\ACA.Domain.csproj": {
-                "projectPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\ACA.Domain\\ACA.Domain.csproj"
+              "D:\\Projects\\Akbaramd.CleanArchitecture\\ACA.Domain\\ACA.Domain.csproj": {
+                "projectPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\ACA.Domain\\ACA.Domain.csproj"
               },
-              "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\ACA.Application.Abstractions.csproj": {
-                "projectPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\ACA.Application.Abstractions.csproj"
+              "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\ACA.Application.Abstractions.csproj": {
+                "projectPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Application.Abstractions\\ACA.Application.Abstractions.csproj"
               }
             }
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -418,21 +472,29 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.WebApi\\ACA.WebApi.csproj": {
+    "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.WebApi\\ACA.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.WebApi\\ACA.WebApi.csproj",
+        "projectUniqueName": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.WebApi\\ACA.WebApi.csproj",
         "projectName": "ACA.WebApi",
-        "projectPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.WebApi\\ACA.WebApi.csproj",
-        "packagesPath": "C:\\Users\\akbar\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.WebApi\\obj\\",
+        "projectPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.WebApi\\ACA.WebApi.csproj",
+        "packagesPath": "C:\\Users\\ahmadi\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.WebApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\akbar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "D:\\Projects\\NuGet.Config",
+          "C:\\Users\\ahmadi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -445,16 +507,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Application\\ACA.Application.csproj": {
-                "projectPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Application\\ACA.Application.csproj"
+              "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Application\\ACA.Application.csproj": {
+                "projectPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Application\\ACA.Application.csproj"
               },
-              "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Infrastructure\\ACA.Infrastructure.csproj": {
-                "projectPath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Akbaramd.CleanArchitecture\\src\\ACA.Infrastructure\\ACA.Infrastructure.csproj"
+              "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Infrastructure\\ACA.Infrastructure.csproj": {
+                "projectPath": "D:\\Projects\\Akbaramd.CleanArchitecture\\src\\ACA.Infrastructure\\ACA.Infrastructure.csproj"
               }
             }
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -512,7 +575,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

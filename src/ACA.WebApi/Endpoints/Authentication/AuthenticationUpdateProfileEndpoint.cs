@@ -1,3 +1,4 @@
+using ACA.Application.Abstractions.UseCases.Authentication;
 using ACA.Application.Abstractions.UseCases.Authentication.Commands;
 using ACA.Domain.UserAggregate;
 using FastEndpoints;
@@ -16,6 +17,7 @@ public class AuthenticationUpdateProfileEndpoint(IMediator mediator) : Endpoint<
   {
     
     Put("/authentication/profile");
+    Permissions(AuthenticationConstants.UpdateProfilePermission);
     Summary(c =>
     {
       c.ExampleRequest = new UpdateAuthenticationProfileCommand()

@@ -1,3 +1,4 @@
+using ACA.Application.Abstractions.UseCases.Authentication;
 using ACA.Application.Abstractions.UseCases.Authentication.Commands;
 using ACA.Application.Abstractions.UseCases.Authentication.Queries;
 using ACA.Common.Result;
@@ -15,7 +16,7 @@ public class AuthenticationGetProfileEndpoint(IMediator mediator)
   public override void Configure()
   {
     Get("/authentication/profile");
-    Permissions("auth.profile");
+    Permissions(AuthenticationConstants.GetProfilePermission);
   }
 
   public override async Task HandleAsync( CancellationToken ct)

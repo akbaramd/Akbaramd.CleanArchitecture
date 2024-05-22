@@ -15,10 +15,8 @@ public class ACADbContext : DbContext
     }
 
     public DbSet<User> Users { get; set; } = default!;
-    public DbSet<UserRole> UsersRoles { get; set; } = default!;
     public DbSet<Role> Roles { get; set; }= default!;
     public DbSet<Permission> Permissions { get; set; }= default!;
-    public DbSet<RolePermission> RolePermissions  { get; set; }= default!;
     public DbSet<Verification> Verifications  { get; set; }= default!;
     
 

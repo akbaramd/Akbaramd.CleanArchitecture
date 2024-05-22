@@ -1,6 +1,7 @@
 using ACA.Domain.Services;
 using ACA.Domain.Shared.Core;
 using ACA.Infrastructure.Data;
+using ACA.Infrastructure.Data.Seeders;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -29,6 +30,9 @@ public static class ServiceCollectionExtensions
     });
     services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
     services.AddScoped(typeof(IRepository<,>), typeof(EfRepository<,>));
+
+    services.AddHostedService<AuthenticationSeeder>();
+    
     return services;
   }
 }

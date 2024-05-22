@@ -38,6 +38,9 @@
       <Compile Update="Endpoints\Authentication\AuthenticationSendCodeEndpoint.Validator.cs">
         <DependentUpon>AuthenticationSendCodeEndpoint.cs</DependentUpon>
       </Compile>
+      <Compile Update="Endpoints\Authentication\AuthenticationUpdateProfileEndpoint.Validator.cs">
+        <DependentUpon>AuthenticationUpdateProfileEndpoint.cs</DependentUpon>
+      </Compile>
     </ItemGroup>
 
 </Project>

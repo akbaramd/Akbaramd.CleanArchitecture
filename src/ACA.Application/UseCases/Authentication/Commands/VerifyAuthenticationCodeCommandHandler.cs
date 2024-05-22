@@ -1,3 +1,4 @@
+using ACA.Application.Abstractions.UseCases.Authentication;
 using ACA.Application.Abstractions.UseCases.Authentication.Commands;
 using ACA.Common.Result;
 using ACA.Domain.Shared.Core;
@@ -5,6 +6,7 @@ using ACA.Domain.UserAggregate;
 using ACA.Domain.VerificationAggregate;
 using FastEndpoints.Security;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace ACA.Application.UseCases.Authentication.Commands;
 
@@ -34,7 +36,7 @@ public class VerifyAuthenticationCodeCommandHandler(
 
         bool isNewUser = false;
 
-        var user = await userRepository.FindOneAsync(x => x.UserName.Equals(request.PhoneNumber.Number),
+        var user = await userRepository.Queryable().Include(c=>c.Roles).ThenInclude(x=>x.Permissions).FirstOrDefaultAsync(x => x.UserName.Equals(request.PhoneNumber.Number),
             cancellationToken);
 
         if (user == null)
@@ -64,12 +66,14 @@ public class VerifyAuthenticationCodeCommandHandler(
             {
                 o.SigningKey = "asdadknwkjernjkwqbrjhwebjrhbwjerwjker";
                 o.ExpireAt = expiredAt;
-                o.User.Permissions.Add();
+                o.User.Roles.Add(user.Roles.Select(x=>x.Name).Distinct().ToArray());
+                o.User.Permissions.Add(user.Roles.SelectMany(x=>x.Permissions).Select(x=>x.Name).Distinct().ToArray());
                 o.User.Claims.Add(
                     ("UserName", user.UserName),
                     ("Id", user.Id.ToString())
                 );
-                o.User.Permissions.Add(("auth.profile"));
+                
+                
             });
 
         return new VerifyAuthenticationCodeResult()

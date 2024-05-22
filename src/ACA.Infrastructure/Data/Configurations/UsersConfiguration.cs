@@ -42,7 +42,12 @@ public class UsersConfiguration : IEntityTypeConfiguration<User>
                 .HasColumnName(nameof(UserProfile.Status))
                 .HasConversion(c => c.Id, v => Enumeration.FromId<UserStatus>(v));
         });
+        
+        builder.HasMany(x=>x.Roles).WithMany(x=>x.Users).UsingEntity(c =>
+        {
+          c.ToTable("UserRoles");
+        });
 
-      
+
     }
 }
