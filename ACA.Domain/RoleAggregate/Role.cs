@@ -1,7 +1,6 @@
 ﻿using ACA.Domain.PermissionAggregate;
 using ACA.Domain.Shared.Core;
 using ACA.Domain.UserAggregate;
-using Microsoft.AspNetCore.Identity;
 
 namespace ACA.Domain.RoleAggregate;
 

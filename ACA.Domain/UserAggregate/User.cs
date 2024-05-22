@@ -1,6 +1,5 @@
 ﻿using ACA.Domain.RoleAggregate;
 using ACA.Domain.Shared.Core;
-using Microsoft.AspNetCore.Identity;
 
 namespace ACA.Domain.UserAggregate;
 

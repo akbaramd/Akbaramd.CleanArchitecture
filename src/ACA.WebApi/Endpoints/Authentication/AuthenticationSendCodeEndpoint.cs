@@ -1,7 +1,6 @@
 using ACA.Application.Abstractions.UseCases.Authentication.Commands;
 using ACA.Domain.UserAggregate;
 using FastEndpoints;
-using FluentValidation;
 using MediatR;
 
 namespace ACA.WebApi.Endpoints.Authentication;
@@ -20,7 +19,7 @@ public class AuthenticationSendCodeEndpoint(IMediator mediator) : Endpoint<SendA
     {
       c.ExampleRequest = new SendAuthenticationCodeCommand()
       {
-        PhoneNumber = new UserPhoneNumber("09371770774")
+        PhoneNumber = new UserPhoneNumber("98","09371770774")
       };
     });
   }

@@ -3,7 +3,6 @@ using ACA.Domain.RoleAggregate;
 using ACA.Domain.UserAggregate;
 using ACA.Domain.VerificationAggregate;
 using ACA.Infrastructure.Data.Configurations;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ACA.Infrastructure.Data;

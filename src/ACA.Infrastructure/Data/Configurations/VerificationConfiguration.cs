@@ -1,5 +1,4 @@
 ﻿using ACA.Domain.Shared.Core;
-using ACA.Domain.UserAggregate;
 using ACA.Domain.VerificationAggregate;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

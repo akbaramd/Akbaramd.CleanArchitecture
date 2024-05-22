@@ -1,7 +1,6 @@
 using ACA.Application.Abstractions.UseCases.Authentication.Commands;
 using ACA.Common.Result;
 using ACA.Domain.Shared.Core;
-using ACA.Domain.UserAggregate;
 using ACA.Domain.VerificationAggregate;
 using MediatR;
 

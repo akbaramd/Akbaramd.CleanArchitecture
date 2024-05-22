@@ -9,31 +9,30 @@ namespace ACA.WebApi.Endpoints.Authentication;
 public class AuthenticationVerifyCodeEndpoint(IMediator mediator)
   : Endpoint<VerifyAuthenticationCodeCommand, VerifyAuthenticationCodeResult>
 {
-  private readonly IMediator _mediator = mediator;
-
   public override void Configure()
   {
     AllowAnonymous();
     Post("/authentication/verify");
-    Summary(c =>
+    Summary(summary =>
     {
-      c.ExampleRequest = new VerifyAuthenticationCodeCommand() { PhoneNumber = new UserPhoneNumber("09371770774"),Code = "123456"};
+      summary.ExampleRequest = new VerifyAuthenticationCodeCommand
+      {
+        PhoneNumber = new UserPhoneNumber("98", "09371770774"),
+        Code = "123456"
+      };
     });
   }
 
   public override async Task HandleAsync(VerifyAuthenticationCodeCommand req, CancellationToken ct)
   {
-    var result = await _mediator.Send(req, ct);
+    var result = await mediator.Send(req, ct);
     if (result.IsSuccess)
     {
       await SendAsync(result.Value, cancellation: ct);
     }
-    else
+    else if (result.Status == ResultStatus.Unauthorized)
     {
-      if (result.Status == ResultStatus.Unauthorized)
-      {
-        await SendUnauthorizedAsync(ct);
-      }
+      await SendUnauthorizedAsync(ct);
     }
   }
 }

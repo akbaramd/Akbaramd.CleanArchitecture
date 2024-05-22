@@ -1,133 +1,119 @@
-﻿namespace ACA.Domain.Shared.Core;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-/// <summary>
-///   Base class for creating value objects in C#.
-/// </summary>
-/// <remarks>
-///   Author: Akbar Ahmadi Saray
-/// </remarks>
-public abstract class ValueObject
+namespace ACA.Domain.Shared.Core
 {
     /// <summary>
-    ///   Compares this value object with another object.
+    /// Base class for creating value objects.
     /// </summary>
-    /// <param name="obj">The object to compare with.</param>
-    /// <returns>True if the objects are equal, otherwise false.</returns>
-    public override bool Equals(object? obj)
+    /// <remarks>
+    /// Author: AkbarAmd
+    /// </remarks>
+    public abstract class ValueObject
     {
-        if (obj == null || obj.GetType() != GetType())
+        /// <summary>
+        /// Determines whether this instance and a specified object are equal.
+        /// </summary>
+        /// <param name="obj">The object to compare to.</param>
+        public override bool Equals(object? obj)
         {
-            return false;
+            if (obj == null || obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            var other = (ValueObject)obj;
+            return GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
         }
 
-        var other = (ValueObject)obj;
-
-        return GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
-    }
-
-    /// <summary>
-    ///   Generates a hash code for the value object.
-    /// </summary>
-    /// <returns>A hash code for the value object.</returns>
-    public override int GetHashCode()
-    {
-        return GetEqualityComponents()
-            .Select(x => x.GetHashCode())
-            .Aggregate((x, y) => x ^ y);
-    }
-
-    /// <summary>
-    ///   Returns a string representation of the value object.
-    /// </summary>
-    /// <returns>A string representation of the value object.</returns>
-    public override string ToString()
-    {
-        return string.Join(", ", GetEqualityComponents().Select(c => c.ToString()));
-    }
-
-    /// <summary>
-    ///   NovinChecks if two value objects are equal.
-    /// </summary>
-    /// <param name="left">The left value object.</param>
-    /// <param name="right">The right value object.</param>
-    /// <returns>True if the value objects are equal, otherwise false.</returns>
-    protected static bool EqualOperator(ValueObject left, ValueObject right)
-    {
-        if (ReferenceEquals(left, null) || ReferenceEquals(right, null))
+        /// <summary>
+        /// Returns a hash code for this instance.
+        /// </summary>
+        public override int GetHashCode()
         {
-            return false;
+            return GetEqualityComponents()
+                .Select(x => x?.GetHashCode() ?? 0)
+                .Aggregate((x, y) => x ^ y);
         }
 
-        return ReferenceEquals(left, right) || left.Equals(right);
-    }
-
-    /// <summary>
-    ///   NovinChecks if two value objects are not equal.
-    /// </summary>
-    /// <param name="left">The left value object.</param>
-    /// <param name="right">The right value object.</param>
-    /// <returns>True if the value objects are not equal, otherwise false.</returns>
-    protected static bool NotEqualOperator(ValueObject left, ValueObject right)
-    {
-        return !EqualOperator(left, right);
-    }
-
-    /// <summary>
-    ///   Retrieves the equality components of the value object.
-    /// </summary>
-    /// <returns>An enumerable of the equality components.</returns>
-    protected abstract IEnumerable<object> GetEqualityComponents();
-
-    /// <summary>
-    ///   NovinChecks if this value object is equal to another value object.
-    /// </summary>
-    /// <param name="other">The other value object to compare with.</param>
-    /// <returns>True if the value objects are equal, otherwise false.</returns>
-    public bool Equals(ValueObject? other)
-    {
-        if (other is null)
+        /// <summary>
+        /// Returns a string representation of the value object.
+        /// </summary>
+        public override string ToString()
         {
-            return false;
+            return string.Join(", ", GetEqualityComponents().Select(c => c?.ToString() ?? ""));
         }
 
-        return GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
-    }
+        /// <summary>
+        /// Retrieves the equality components of the value object.
+        /// </summary>
+        protected abstract IEnumerable<object?> GetEqualityComponents();
 
-    /// <summary>
-    ///   NovinChecks if this value object is equal to another value object.
-    /// </summary>
-    /// <typeparam name="T">The type of the value objects.</typeparam>
-    /// <param name="other">The other value object to compare with.</param>
-    /// <returns>True if the value objects are equal, otherwise false.</returns>
-    public bool Equals<T>(T? other) where T : ValueObject
-    {
-        if (other is null)
+        /// <summary>
+        /// Checks if two value objects are equal.
+        /// </summary>
+        protected static bool EqualOperator(ValueObject left, ValueObject right)
         {
-            return false;
+            if (ReferenceEquals(left, null) || ReferenceEquals(right, null))
+            {
+                return ReferenceEquals(left, right);
+            }
+
+            return left.Equals(right);
         }
 
-        return GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
-    }
+        /// <summary>
+        /// Checks if two value objects are not equal.
+        /// </summary>
+        protected static bool NotEqualOperator(ValueObject left, ValueObject right)
+        {
+            return !EqualOperator(left, right);
+        }
 
-    /// <summary>
-    ///   NovinChecks if two value objects are equal.
-    /// </summary>
-    /// <param name="one">The first value object.</param>
-    /// <param name="two">The second value object.</param>
-    /// <returns>True if the value objects are equal, otherwise false.</returns>
-    public static bool operator ==(ValueObject one, ValueObject two)
-    {
-        return EqualOperator(one, two);
-    }
+        /// <summary>
+        /// Determines whether the specified value object is equal to the current value object.
+        /// </summary>
+        /// <param name="other">The value object to compare with the current value object.</param>
+        public bool Equals(ValueObject? other)
+        {
+            if (other is null)
+            {
+                return false;
+            }
 
-    /// <summary>
-    ///   NovinChecks if two value objects are not equal.
-    /// </summary>
-    /// <param name="one">The first value object.</param>
-    /// <param name="two">The second value object.</param>
-    /// <returns>True if the value objects are not equal, otherwise false.</returns>
-    public static bool operator !=(ValueObject one, ValueObject two)
-    {
-        return NotEqualOperator(one, two);
+            return GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
+        }
+
+        /// <summary>
+        /// Determines whether the specified value object is equal to the current value object.
+        /// </summary>
+        /// <typeparam name="T">The type of the value objects.</typeparam>
+        /// <param name="other">The value object to compare with the current value object.</param>
+        public bool Equals<T>(T? other) where T : ValueObject
+        {
+            if (other is null)
+            {
+                return false;
+            }
+
+            return GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
+        }
+
+        /// <summary>
+        /// Checks if two value objects are equal.
+        /// </summary>
+        public static bool operator ==(ValueObject one, ValueObject two)
+        {
+            return EqualOperator(one, two);
+        }
+
+        /// <summary>
+        /// Checks if two value objects are not equal.
+        /// </summary>
+        public static bool operator !=(ValueObject one, ValueObject two)
+        {
+            return NotEqualOperator(one, two);
+        }
     }
 }

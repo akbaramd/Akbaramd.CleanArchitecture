@@ -1,8 +1,6 @@
 using ACA.Application.Abstractions.UseCases.Authentication;
 using ACA.Application.Abstractions.UseCases.Authentication.Commands;
-using ACA.Domain.UserAggregate;
 using FastEndpoints;
-using FluentValidation;
 using MediatR;
 
 namespace ACA.WebApi.Endpoints.Authentication;

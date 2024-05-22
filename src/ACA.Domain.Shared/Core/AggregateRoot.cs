@@ -1,43 +1,90 @@
-﻿namespace ACA.Domain.Shared.Core;
+﻿using System;
+using System.Collections.Generic;
 
-public abstract class AggregateRoot : Entity, IAggregateRoot
+namespace ACA.Domain.Shared.Core
 {
-    private List<IDomainEvent> _domainEvents = [];
-
     /// <summary>
-    ///   Gets the list of domain events associated with the entity.
+    /// Base class for aggregate roots, handling domain events.
     /// </summary>
-    public List<IDomainEvent> DomainEvents => _domainEvents ??= new List<IDomainEvent>();
-
-    /// <summary>
-    ///   Adds a domain event to the list associated with the entity.
-    /// </summary>
-    /// <param name="domainEventItem">The domain event to add.</param>
-    public void AddDomainEvent(IDomainEvent domainEventItem)
+    /// <remarks>
+    /// Author: AkbarAmd
+    /// </remarks>
+    public abstract class AggregateRoot : Entity, IAggregateRoot
     {
-        _domainEvents ??= new List<IDomainEvent>();
-        _domainEvents.Add(domainEventItem);
+        private List<IDomainEvent> _domainEvents = new List<IDomainEvent>();
+
+        /// <summary>
+        /// Gets the list of domain events associated with the entity.
+        /// </summary>
+        public IReadOnlyCollection<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
+
+        /// <summary>
+        /// Adds a domain event to the list associated with the entity.
+        /// </summary>
+        /// <param name="domainEvent">The domain event to add.</param>
+        public void AddDomainEvent(IDomainEvent domainEvent)
+        {
+            _domainEvents.Add(domainEvent);
+        }
+
+        /// <summary>
+        /// Removes a domain event from the list associated with the entity.
+        /// </summary>
+        /// <param name="domainEvent">The domain event to remove.</param>
+        public void RemoveDomainEvent(IDomainEvent domainEvent)
+        {
+            _domainEvents.Remove(domainEvent);
+        }
+
+        /// <summary>
+        /// Clears all domain events associated with the entity.
+        /// </summary>
+        public void ClearDomainEvents()
+        {
+            _domainEvents.Clear();
+        }
     }
 
     /// <summary>
-    ///   Removes a domain event from the list associated with the entity.
+    /// Base class for aggregate roots with a specified identifier type, handling domain events.
     /// </summary>
-    /// <param name="domainEventItem">The domain event to remove.</param>
-    public void RemoveDomainEvent(IDomainEvent domainEventItem)
+    /// <typeparam name="TId">The type of the identifier for the aggregate root.</typeparam>
+    /// <remarks>
+    /// Author: AkbarAmd
+    /// </remarks>
+    public abstract class AggregateRoot<TId> : Entity<TId>, IAggregateRoot<TId> where TId : IEquatable<TId>
     {
-        _domainEvents?.Remove(domainEventItem);
+        private List<IDomainEvent> _domainEvents = new List<IDomainEvent>();
+
+        /// <summary>
+        /// Gets the list of domain events associated with the entity.
+        /// </summary>
+        public IReadOnlyCollection<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
+
+        /// <summary>
+        /// Adds a domain event to the list associated with the entity.
+        /// </summary>
+        /// <param name="domainEvent">The domain event to add.</param>
+        public void AddDomainEvent(IDomainEvent domainEvent)
+        {
+            _domainEvents.Add(domainEvent);
+        }
+
+        /// <summary>
+        /// Removes a domain event from the list associated with the entity.
+        /// </summary>
+        /// <param name="domainEvent">The domain event to remove.</param>
+        public void RemoveDomainEvent(IDomainEvent domainEvent)
+        {
+            _domainEvents.Remove(domainEvent);
+        }
+
+        /// <summary>
+        /// Clears all domain events associated with the entity.
+        /// </summary>
+        public void ClearDomainEvents()
+        {
+            _domainEvents.Clear();
+        }
     }
-
-
-    /// <summary>
-    ///   Clears all domain events associated with the entity.
-    /// </summary>
-    public void ClearDomainEvents()
-    {
-        _domainEvents?.Clear();
-    }
-}
-
-public abstract class AggregateRoot<TId> : Entity<TId>, IAggregateRoot<TId> where TId : IEquatable<TId>
-{
 }

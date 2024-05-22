@@ -1,106 +1,112 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace ACA.Domain.Shared.Core;
-
-/// <summary>
-///   Base class for entities in the domain model without a specified identifier type.
-/// </summary>
-/// <remarks>
-///   Author: Akbar Ahmadi Saray
-/// </remarks>
-public abstract class Entity : IEntity
+﻿namespace ACA.Domain.Shared.Core
 {
+  /// <summary>
+  /// Base class for entities without a specified identifier type.
+  /// </summary>
+  /// <remarks>
+  /// Author: AkbarAmd
+  /// </remarks>
+  public abstract class Entity : IEntity
+  {
     /// <summary>
-    ///   NovinChecks if the entity is transient (not persisted).
+    /// Determines if the entity is transient (not persisted).
     /// </summary>
-    /// <returns>True if the entity is transient, otherwise false.</returns>
-    public bool IsTransient()
+    public virtual bool IsTransient()
     {
-        return false; // Entities without a specific identifier type are never transient
+      return false;
     }
 
     /// <summary>
-    ///   NovinChecks if the entity is equal to another object.
+    /// Checks if this entity is equal to another object.
     /// </summary>
     /// <param name="obj">The object to compare with.</param>
-    /// <returns>True if the objects are equal, otherwise false.</returns>
     public override bool Equals(object? obj)
     {
-        return obj is Entity && ReferenceEquals(this, obj);
+      if (obj == null || obj.GetType() != GetType())
+      {
+        return false;
+      }
 
-        // Default implementation for non-generic Entity, can be overridden by subclasses
+      return ReferenceEquals(this, obj);
     }
 
-    public abstract object?[] GetKeys();
-
     /// <summary>
-    ///   Generates a hash code for the entity.
+    /// Generates a hash code for this entity.
     /// </summary>
-    /// <returns>A hash code for the entity.</returns>
     public override int GetHashCode()
     {
-        return base.GetHashCode(); // Default implementation for non-generic Entity
+      return base.GetHashCode();
     }
-}
 
-/// <summary>
-///   Base class for entities in the domain model with a specified identifier type.
-/// </summary>
-/// <typeparam name="TId">The type of the identifier for the entity.</typeparam>
-public abstract class Entity<TId> : Entity, IEntity<TId> where TId : IEquatable<TId>
-{
     /// <summary>
-    ///   Gets or sets the unique identifier of the entity.
+    /// Gets the keys for this entity.
     /// </summary>
-    [Key]
+    public abstract object?[] GetKeys();
+  }
+
+
+  /// <summary>
+  /// Base class for entities with a specified identifier type.
+  /// </summary>
+  /// <typeparam name="TId">The type of the identifier.</typeparam>
+  /// <remarks>
+  /// Author: AkbarAmd
+  /// </remarks>
+  public abstract class Entity<TId> : Entity, IEntity<TId> where TId : IEquatable<TId>
+  {
+    /// <summary>
+    /// Gets or sets the unique identifier of the entity.
+    /// </summary>
     public virtual TId Id { get; set; } = default!;
 
     /// <summary>
-    ///   NovinChecks if the entity is transient (not persisted).
+    /// Determines if the entity is transient (not persisted).
     /// </summary>
-    /// <returns>True if the entity is transient, otherwise false.</returns>
-    public new bool IsTransient()
+    public override bool IsTransient()
     {
-        return Id.Equals(default); // Implementation specific to generic Entity<TId>
+      return Id.Equals(default(TId));
     }
 
+    /// <summary>
+    /// Gets the keys for this entity.
+    /// </summary>
     public override object?[] GetKeys()
     {
-        return new object?[] { Id };
+      return new object?[] { Id };
     }
 
-
     /// <summary>
-    ///   NovinChecks if the entity is equal to another object.
+    /// Checks if this entity is equal to another object.
     /// </summary>
     /// <param name="obj">The object to compare with.</param>
-    /// <returns>True if the objects are equal, otherwise false.</returns>
     public override bool Equals(object? obj)
     {
-        if (obj is not Entity<TId> other)
-        {
-            return false;
-        }
+      if (obj == null || obj.GetType() != GetType())
+      {
+        return false;
+      }
 
-        if (ReferenceEquals(this, other))
-        {
-            return true;
-        }
+      if (ReferenceEquals(this, obj))
+      {
+        return true;
+      }
 
-        if (other.IsTransient() || IsTransient())
-        {
-            return false;
-        }
+      var other = (Entity<TId>)obj;
 
-        return other.Id.Equals(Id);
+      if (other.IsTransient() || IsTransient())
+      {
+        return false;
+      }
+
+      return Id.Equals(other.Id);
     }
 
     /// <summary>
-    ///   Generates a hash code for the entity.
+    /// Generates a hash code for this entity.
     /// </summary>
-    /// <returns>A hash code for the entity.</returns>
     public override int GetHashCode()
     {
-        return Id.GetHashCode(); // Implementation specific to generic Entity<TId>
+      return Id == null ? 0 : Id.GetHashCode();
     }
+  }
 }

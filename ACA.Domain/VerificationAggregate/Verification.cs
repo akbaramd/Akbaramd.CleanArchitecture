@@ -1,5 +1,4 @@
-﻿using ACA.Domain.RoleAggregate;
-using ACA.Domain.Shared.Core;
+﻿using ACA.Domain.Shared.Core;
 
 namespace ACA.Domain.VerificationAggregate;
 

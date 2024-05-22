@@ -1,5 +1,4 @@
 using ACA.Application.Abstractions.UseCases.Authentication;
-using ACA.Domain.PermissionAggregate;
 using ACA.Domain.RoleAggregate;
 using ACA.Domain.Shared.Core;
 using ACA.Domain.UserAggregate;
@@ -41,7 +40,7 @@ public class AuthenticationSeeder : BackgroundService
         Status = UserStatus.Active,
         FirstName = "Akbar",
         LastName = "Ahmadi",
-        PhoneNumber = new UserPhoneNumber("09371770774")
+        PhoneNumber = new UserPhoneNumber("98","09371770774")
       }
     }
   ];

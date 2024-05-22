@@ -1,10 +1,12 @@
 ﻿using ACA.Domain.Shared.Core;
-using Microsoft.AspNetCore.Identity;
 
 namespace ACA.Domain.UserAggregate;
 
 public class UserProfile : ValueObject
 {
+  public UserProfile()
+  {
+  }
     public UserStatus Status { get; set; } = UserStatus.Active;
     public string? FirstName { get; set; }
     public string? LastName { get; set; }

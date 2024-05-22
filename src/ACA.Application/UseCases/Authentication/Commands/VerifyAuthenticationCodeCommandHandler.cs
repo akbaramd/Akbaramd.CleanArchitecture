@@ -1,4 +1,3 @@
-using ACA.Application.Abstractions.UseCases.Authentication;
 using ACA.Application.Abstractions.UseCases.Authentication.Commands;
 using ACA.Common.Result;
 using ACA.Domain.Shared.Core;
@@ -72,8 +71,6 @@ public class VerifyAuthenticationCodeCommandHandler(
                     ("UserName", user.UserName),
                     ("Id", user.Id.ToString())
                 );
-                
-                
             });
 
         return new VerifyAuthenticationCodeResult()

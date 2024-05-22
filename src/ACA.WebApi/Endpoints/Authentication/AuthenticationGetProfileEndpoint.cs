@@ -1,8 +1,6 @@
 using ACA.Application.Abstractions.UseCases.Authentication;
-using ACA.Application.Abstractions.UseCases.Authentication.Commands;
 using ACA.Application.Abstractions.UseCases.Authentication.Queries;
 using ACA.Common.Result;
-using ACA.Domain.UserAggregate;
 using FastEndpoints;
 using MediatR;
 

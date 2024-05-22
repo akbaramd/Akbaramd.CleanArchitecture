@@ -1,9 +1,7 @@
 using System.Text.Json.Serialization;
 using ACA.Common.Result;
-using ACA.Domain.UserAggregate;
 using FastEndpoints;
 using MediatR;
-using Microsoft.AspNetCore.Routing;
 
 namespace ACA.Application.Abstractions.UseCases.Authentication.Commands;
 

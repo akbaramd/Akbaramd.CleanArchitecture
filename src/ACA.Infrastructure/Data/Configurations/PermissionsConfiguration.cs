@@ -1,6 +1,4 @@
 ﻿using ACA.Domain.PermissionAggregate;
-using ACA.Domain.RoleAggregate;
-using ACA.Domain.UserAggregate;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

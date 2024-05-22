@@ -1,5 +1,4 @@
 ﻿using ACA.Domain.Shared.Core;
-using ACA.Domain.UserAggregate;
 
 namespace ACA.Domain.VerificationAggregate;
 

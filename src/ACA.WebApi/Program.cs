@@ -1,12 +1,9 @@
 using ACA.Application.Abstractions.UseCases.Authentication.Commands;
 using ACA.Application.UseCases.Authentication.Commands;
 using ACA.Infrastructure.Ioc;
-using ACA.WebApi.Endpoints.Authentication;
 using FastEndpoints;
 using FastEndpoints.Security;
 using FastEndpoints.Swagger;
-using FluentValidation;
-using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using NSwag;
 
