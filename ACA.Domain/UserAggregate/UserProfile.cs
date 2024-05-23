@@ -1,23 +1,35 @@
-﻿using ACA.Domain.Shared.Core;
+﻿using System;
+using System.Collections.Generic;
+using ACA.Domain.Shared.Core;
 
-namespace ACA.Domain.UserAggregate;
-
-public class UserProfile : ValueObject
+namespace ACA.Domain.UserAggregate
 {
-  public UserProfile()
-  {
-  }
-    public UserStatus Status { get; set; } = UserStatus.Active;
-    public string? FirstName { get; set; }
-    public string? LastName { get; set; }
-    public string? Email { get; set; }
-
-    public UserPhoneNumber PhoneNumber { get; set; } = default!;
-
-
-    protected override IEnumerable<object> GetEqualityComponents()
+    /// <summary>
+    /// Represents a user profile value object.
+    /// </summary>
+    /// <remarks>
+    /// Author: AkbarAmd
+    /// </remarks>
+    public class UserProfile : ValueObject
     {
-        if (FirstName != null) yield return FirstName;
-        if (LastName != null) yield return LastName;
+        public string? FirstName { get; private set; }
+        public string? LastName { get; private set; }
+
+        public UserProfile(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+
+        protected override IEnumerable<object> GetEqualityComponents()
+        {
+            yield return FirstName;
+            yield return LastName;
+        }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}";
+        }
     }
 }

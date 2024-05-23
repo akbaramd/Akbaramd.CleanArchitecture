@@ -18,9 +18,7 @@ public class UpdateAuthenticationProfileCommandHandler(IRepository<User> reposit
       return Result.Unauthorized();
     }
 
-    user.Profile.FirstName = request.FirstName;
-    user.Profile.LastName = request.LastName;
-    user.Profile.Email = request.Email;
+    user.Profile = new UserProfile(request.FirstName, request.LastName);
 
     await repository.UpdateAsync(user, cancellationToken: cancellationToken);
     

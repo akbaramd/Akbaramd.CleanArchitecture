@@ -23,7 +23,7 @@ public class GetAuthenticationProfileQueryHandler (IRepository<User> repository)
         return new GetAuthenticationProfileQueryResult()
         {
             Id = user.Id,
-            UserName = user.UserName,
+            PhoneNumber = user.PhoneNumber,
             Profile = user.Profile
         };
     }

@@ -12,6 +12,6 @@ public class GetAuthenticationProfileQuery : IRequest<Result<GetAuthenticationPr
 public class GetAuthenticationProfileQueryResult 
 {
     public Guid Id { get; set; }
-    public string UserName { get; set; } = default!;
+    public UserPhoneNumber PhoneNumber { get; set; } = default!;
     public UserProfile Profile { get; set; } = default!;
 }

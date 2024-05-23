@@ -1,4 +1,3 @@
-using ACA.Domain.Services;
 using ACA.Domain.Shared.Core;
 using ACA.Infrastructure.Data;
 using ACA.Infrastructure.Data.Seeders;
@@ -9,11 +8,6 @@ namespace ACA.Infrastructure.Ioc;
 
 public static class ServiceCollectionExtensions
 {
-  public static IServiceCollection AddDomain(this IServiceCollection services)
-  {
-    services.AddScoped<UserManager>();
-    return services;
-  }
 
   public static IServiceCollection AddDataAccess(this IServiceCollection services, string? connectionString)
   {

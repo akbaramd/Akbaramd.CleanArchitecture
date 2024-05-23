@@ -1,8 +1,6 @@
 ﻿using System.Reflection;
 using System.Text;
-using ACA.Application.Abstractions.Services;
 using ACA.Infrastructure.Options;
-using ACA.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,7 +13,6 @@ public static class AuthenticationBuilderExtensions
 {
     public static AuthenticationBuilder AddJwtBearer(AuthenticationBuilder builder)
     {
-        builder.Services.AddScoped<IJwtService, JwtService>();
         
         builder.Services.Configure<JwtOptions>(JwtOptions.Key,c =>
         {
