@@ -18,7 +18,7 @@ public class SendAuthenticationCodeCommandHandler(IRepository<Verification> veri
       return Result.Error($"verification code is not found");
     }
 
-    verification = new Verification(VerificationType.Phone,request.PhoneNumber.Number,"123456");
+    verification = new Verification(VerificationType.Phone,request.PhoneNumber.Number!,"123456");
     await verificationRepository.InsertAsync(verification, cancellationToken: cancellationToken);
     return Result.Success();
   }

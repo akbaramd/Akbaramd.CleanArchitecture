@@ -14,14 +14,14 @@ namespace ACA.Domain.UserAggregate
         private static readonly Regex CodeRegex = new Regex(@"^\+\d{1,3}$");
         private static readonly Regex NumberRegex = new Regex(@"^\d{10,15}$");
 
-        public UserPhoneNumber(string code, string number)
+        public UserPhoneNumber(string? code, string? number)
         {
-            if (!CodeRegex.IsMatch(code))
+            if (code == null || !CodeRegex.IsMatch(code))
             {
                 throw new ArgumentException("Invalid phone code format", nameof(code));
             }
 
-            if (!NumberRegex.IsMatch(number))
+            if (number == null || !NumberRegex.IsMatch(number))
             {
                 throw new ArgumentException("Invalid phone number format", nameof(number));
             }
@@ -30,10 +30,10 @@ namespace ACA.Domain.UserAggregate
             Number = number;
         }
 
-        public string Code { get; }
-        public string Number { get; }
+        public string? Code { get; }
+        public string? Number { get; }
 
-        protected override IEnumerable<object> GetEqualityComponents()
+        protected override IEnumerable<object?> GetEqualityComponents()
         {
             yield return Code;
             yield return Number;

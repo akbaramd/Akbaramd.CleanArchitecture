@@ -42,9 +42,9 @@ namespace ACA.Application.UseCases.Authentication.Commands
                 user = await CreateUserAsync(request.PhoneNumber, cancellationToken);
             }
 
-            var refreshToken = await CreateRefreshTokenAsync(user, cancellationToken);
+            var refreshToken = await CreateRefreshTokenAsync(user!, cancellationToken);
 
-            var jwtToken = GenerateJwtToken(user, refreshToken);
+            var jwtToken = GenerateJwtToken(user!, refreshToken);
 
             return new VerifyAuthenticationCodeResult
             {

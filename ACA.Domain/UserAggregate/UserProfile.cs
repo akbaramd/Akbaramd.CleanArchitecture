@@ -21,7 +21,7 @@ namespace ACA.Domain.UserAggregate
             LastName = lastName;
         }
 
-        protected override IEnumerable<object> GetEqualityComponents()
+        protected override IEnumerable<object?> GetEqualityComponents()
         {
             yield return FirstName;
             yield return LastName;

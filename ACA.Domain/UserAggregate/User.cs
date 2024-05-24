@@ -24,7 +24,7 @@ public class User : AggregateRoot<Guid>
         PhoneNumber = phoneNumber ?? throw new ArgumentNullException(nameof(phoneNumber));
     }
 
-    public static User? Create(string firstName, string lastName, string phoneNumberCode, string phoneNumber)
+    public static User Create(string firstName, string lastName, string? phoneNumberCode, string? phoneNumber)
     {
         var profile = new UserProfile(firstName, lastName);
         var phone = new UserPhoneNumber(phoneNumberCode, phoneNumber);

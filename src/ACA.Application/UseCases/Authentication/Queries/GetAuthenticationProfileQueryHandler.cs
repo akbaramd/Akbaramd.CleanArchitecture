@@ -24,7 +24,7 @@ public class GetAuthenticationProfileQueryHandler (IRepository<User> repository)
         {
             Id = user.Id,
             PhoneNumber = user.PhoneNumber,
-            Profile = user.Profile
+            Profile = user.Profile!
         };
     }
 }
